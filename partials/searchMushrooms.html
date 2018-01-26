@@ -1,0 +1,15 @@
+<div class="mushrooms">
+    <h3>Search for Shroooms</h3>
+    <input type="text" ng-model="shroomList">
+    <div>
+        <input type="radio" name="poison" id="allShrooms" ng-model="canEat">
+        <label for="notPoison">All Mushrooms</label>
+        <input type="radio" name="poison" id="poison" ng-model="canEat" ng-value="false" >
+        <label for="poison">Poisonous</label>
+        <input type="radio" name="poison" id="notPoison" ng-model="canEat" ng-value="true">
+        <label for="notPoison">Not Poisonous</label>
+    </div>
+    <ul>
+        <li ng-repeat="shroom in mushrooms | filter: {name: shroomList, edible: canEat}"> {{shroom.name}} </li>
+    </ul>
+</div>
