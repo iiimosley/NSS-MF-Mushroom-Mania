@@ -19,3 +19,5 @@ In a single view application implementing AngularJs:
   + inject factory dependancy in controller
   + use apporpriate functionality to fetch factory data
   + set retrieved data to `$scope.mushroom` controller variable to template data into the partial
+  
+  
